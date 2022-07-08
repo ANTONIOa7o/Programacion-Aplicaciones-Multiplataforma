@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template-Stringt</title>
+</head>
+<body>
+    <!--
+        ======================
+          TEMPLATE STRINGS
+        ======================
+
+En un principia javaScript:
+a)las cadenas de caracteres vienen definidas por comillas simple o dobles
+b)No existía la posiblidad de insertar cualquier variable dentre de una cadena.
+c)Las concatenaciones tenia una realidad establecidas:
+
+var nombre="Mario";
+var edad=32;
+console.log("Hola, me llamo: "+ nombre+ "y tengo " +edad+"años");
+
+APORTACIONES DE ECMA A -> TYPE:
+a) Incluye un nuevo tipo de string, delimitado por =====> ` (comilla invertida)
+b) Podremos incluir nuevas lineas
+c)Nuevo formato de inclusion de variables dentro de las estructura de string
+=====> ${}
+
+
+    -->
+    <script>
+var nombre="Toño";
+var apellido="Cuadrado"
+var edad =45;
+//Formato antiguo
+document.write("Hola, me llamo: "+nombre+" "+apellido+" y tengo: "+edad+"años"+"<br>");
+//Formato actualizado
+document.write(`Hola,me llamo ${nombre} ${apellido} y tengo ${edad}   años <br>`)
+    </script>
+</body>
+</html>

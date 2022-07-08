@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6</title>
+</head>
+
+<body>
+    <!--
+        ==============================
+                  ECMASCRIP
+        ==============================
+    Entendidio en un principio como hemos conocido en los principios como
+    JavaScript, siendo la version más ortodoxa.
+    Caracteristicas:
+    1.arrow(=>)
+    2.Template, string 
+    3.Declaracion y ambito de las variables.
+    4. Clases
+    5.Herencias
+   
+    -->
+    <!--
+
+1. Evolucion arrow, esta evolucion comienza en for each
+   
+-for each-
+Entendido como un método, estructura control, a su vez surgiendo en el
+grupo de iterancia(bucles). Con el matiz concreto de que no devuelve una
+nueva matriz. Siendo su funcion principal la de ejecutar una funcion
+por cada elemento que recorre. Esta itenerancia en principio parte de la
+declaracion de las variables(3 declaraciones):
+1.valor(elemento)
+2.indice
+3.Array
+Sintaxis:
+[inicio]
+        varArray.foreach(funtion(elemento,indice,Array){
+            metodo declarado(sentencias,...);
+        });
+
+[1ª evolucion]
+
+varArray.foeach(funtion(elemento){
+    metodo declarado, ej-> console.log(elemento);
+});
+
+[2ª evolucion]
+directamente aparece => uso asociado de Ecma que migra a TypeScript
+
+varArrow.foreach(elemento=>{console.log(elemento))
+});
+
+-->
+    <script>
+        var datos = [1, 2, 3, 4, 5, 6, 7, 8];
+
+        //Recorrido tradicional
+        for (var item of datos) {
+            console.log(item);
+        }
+
+        //Recorrido adoptado por Type
+        datos.forEach(item => {console.log(item)});
+
+
+/*
+------sentencia return------------
+Finaliza la ejecucion de la funcion, y especifica un valor para ser devuelto
+a quien llama esa funcion. ed:
+Primero es como si forzara una salida inmediata de la funcion en la que se encuentra
+y seguidamente se puede utilizar  para devolver el valor
+
+*/
+ var otraFuncion = function(numero){
+    return numero+2
+ }
+ console.log(otraFuncion(5));
+
+//Pasar la estructura anterior a arrow
+var otraFuncion = (numero)=>numero+2
+console.log(otraFuncion(2))
+    </script>
+
+<!--
+
+-->
+</body>
+
+</html>

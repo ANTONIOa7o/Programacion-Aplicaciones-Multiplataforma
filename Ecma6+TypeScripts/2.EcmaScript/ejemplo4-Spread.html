@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        ------------------------SPREAD---------------------------
+
+        Expresión que nos ayuda a en aquellas expresiones donde podemos esperar
+        varias o multiples argumentos(llamadas a funcion) o multiples elementos(arrays), 
+        será extendida en dicha situacion.
+        sintaxis (...nombre variable)
+        Ejemplo:
+    -->
+    <script>
+          const agregar = (a,b)=>a+b;
+          let argumentos =[3,4];
+          console.log(agregar(...argumentos));
+
+
+    /*
+    Realizando con objetos definidos de manera literal
+    Ejemplo:
+    */      
+   var nombre= new Array('Juan','Pedro','Luis','Maria');
+   document.write(nombre+"<br>");
+
+   //Operador spread; Concatenar dentro de un array
+   var otrosNombres =['Ismael','Rocio',...nombre,'Jorge'];
+   document.write(otrosNombres);
+
+   //Otra forma de concatenar
+
+   let mapABC = {a:5,b:6,c:3};
+   let mapABCD = { ...mapABC,d:7};
+   console.log(mapABCD);
+   console.log(mapABCD.a);
+   
+    </script>
+  
+</body>
+</html>

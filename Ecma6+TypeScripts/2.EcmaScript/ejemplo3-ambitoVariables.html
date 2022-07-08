@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+                AMBITO DE LAS VARIABLES
+
+        Ecma, incluye un nuevo concepto de ambito dentro de nuestros 
+        bloques de desarrollo funcional.
+        Digamos anteriormente las variables limitaban su ambito a las
+        funciones donde se encontraban definidas. Y podian acceder al ambito
+        superior del contexto de la funcion
+
+  
+
+    /*  1ª Reflexion
+       var cinco=5;
+        var otroTres="Tres";
+
+        function ambito() {
+           var tres =3;
+           var otroCinco="cinco";//Correcta
+           var otroTres="Tres" //Error
+        } */
+        -->
+    <!--
+
+        DECLARACION DE VARIABLES-----------------------
+
+        A) var: Continuará funcionando de la misma manera. No obstante surgen el apoyo
+        de dos nuevas variables: 
+        let y const
+        B) let y const: Utilzar los bloques creados a partir de llaves, como contenedores
+        de ambito
+        C) Quedando restringidas estas ultimas a su ambito
+    -->
+    <script>
+        //variables Globales
+        var i =0;
+        for(var i=0;i<10;i++){
+            let j = i;
+        }
+        document.write("Variable global:"+ i + "<br>");
+        document.write("Variable local:"+ j + "<br>");// queda indefinida
+
+    
+        var i =0;
+        for(var i=0;i<10;i++){
+            var j = i;
+            let k=i
+        }
+        console.log(j);
+     /*    console.log(k);//queda igualmente indefinida */
+
+    /*
+    const principalmente valores de lectura, una vez instanciadas con algun
+    identificador, no podrán reasignarse.
+        */
+       const texto = "Hola";
+       document.write(texto);
+        texto="adios"// No se puede reasignar otro valor a la variable, error
+    </script>
+</body>
+</html>
