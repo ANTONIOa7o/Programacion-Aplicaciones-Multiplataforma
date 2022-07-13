@@ -1,0 +1,26 @@
+
+.verde{
+    background-color: green;
+    color: gainsboro;
+    font-weight: bold;
+}
+.rojo{
+    color: rgb(168, 99, 96);
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+.resaltar{
+    font-weight: bold;
+    font-style: italic;
+    font-size: x-large;
+
+}
+hr{
+    width: 90%;
+    color: black;
+    border-radius: 6px;
+    height: 2px;
+    box-shadow: 2px 5px 8px slategray;
+
+}
