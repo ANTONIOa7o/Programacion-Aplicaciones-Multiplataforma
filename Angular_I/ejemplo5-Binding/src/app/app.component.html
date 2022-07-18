@@ -1,0 +1,65 @@
+<!--
+          =================================
+          TIPOS DE BINDING (Construccion)
+          =================================
+
+    4 tipos de formas de construir estructuras de comunicacion entree
+html y TypeScript.
+
+1º. StingInterpolation ->
+{{}} TypeScript => Html
+Desarrolla o presenta una informacion(variable,array,...) y nos la 
+muestra en html
+
+2º. PropertyBinding ->
+[] html -> TypeScript
+Informacion del lado de Html, acción  por parte del usuario y nosotros generamos 
+un valor (defecto, tiempo, estilo....).
+
+3º EventBinding ->
+()TypeScript  <= HTML
+Clasica estructura de comunicacion y de escucha de eventos, cargados(desarrollado en Js) en html, que se ejecutan
+porsterior en accion de TypeScript
+
+4º Two  way Data  Binding ->
+[()]typeScript  <=> Html
+Comunicacion  en las dos vias, Cliente(html) a TypeScript y viceversa,ed:
+de la visualizacion del usuario a Type, y de  Type a Visualizacion a tiempo real
+sin llamadas, sin peticiones, sin asincronia
+
+
+-->
+<div class="container" style="text-align:center ; margin:0 auto ;">
+
+  <h2>1º StringInterpolation</h2>
+  {{title}} <br>
+  {{nombre + ''}} <br>
+  {{7+3-6}} <br>
+
+  <hr>
+  <h2>2º PropertyBinding</h2>
+  <button class="btn btn-warning" [disabled]="habilitado">Púlsame</button>
+  <hr>
+  <h2>3º EventBinding</h2>
+  <button class="btn btn-secondary" (click)="saludar()">Saludar</button>
+
+  <hr>
+  <h2>4º Two way Data-Bindindg </h2>
+  <div>
+    <label for="">Notas:</label>
+    <input type="text" placeholder="escribe aqui" [(ngModel)]='nombre'>
+    <p class="verde">
+      Escribe: {{nombre}}
+    </p>
+  </div>
+
+  <hr>
+  <h2>Conjugacion de Binding</h2>
+  <div  (mouseover)="this.estilo='verde'" (mouseout)="this.estilo='rojo'" [class]="estilo">
+    el  color mostrado es: {{estilo}}
+  </div>
+  <!--
+    Hemos aplicado [] estilos declarados en css
+  -->
+
+</div>

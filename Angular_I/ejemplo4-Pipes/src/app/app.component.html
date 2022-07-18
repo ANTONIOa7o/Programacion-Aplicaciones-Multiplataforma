@@ -1,0 +1,48 @@
+<h2>Ejemplos de Pipes</h2>
+<!--
+Pipes,  elementos que usamos en el DOM  del html, junto con la  directivas que  vayan a
+tomar un elemento de entrada. y asi añadan cierto formato y nos van a ofrecer una salida
+diferente de visualizacion.
+Angular trae por defecto una cantidad de pipes, para configurar, y desarrollar cambios
+comunes.Ed: Cambiar estructuras de caracteres, mayusculas,  minusculas, forteos de fechas,
+-->
+<h3>Pipes de Texto</h3>
+Sin formato  {{texto}};
+En minusculas: {{texto | lowercase}} <br>
+*En mayusculas: {{texto | uppercase}} <br>
+Tiitulo: {{texto | titlecase}}<br>
+
+<h3>Pipes Numero</h3>
+Sin formato:  {{numero}} <br>
+*4 decimales: {{numero| number:'.4'}} <br>
+nº digitos y ºn decimales: {{numero | number: '10.6'}} <br>
+
+<h3>Pipes Porcentajes</h3>
+Sin formato: {{porcentaje}} <br>
+Porcentaje: {{porcentaje | percent}} <br>
+Porcentaje con 1 decimal {{porcentaje | percent:'.1'}} <br>
+*Porcentaje con 3 digitos y 2 decimmale: {{porcentaje| percent:'3.2'}} <br>
+
+<h3>Pipes  Monedas</h3>
+Sin formato: {{numero}} <br>
+Con formato: {{numero | currency}} <br>
+*En euros: {{numero | currency:'EUR'}} <br>
+Codigo de euro: {{numero | currency:'EUROS':'code'}} <br>
+Simbolo euro + nº digitos y  nº decimiales {{numero| currency:'EUR':'symbol':'6.4'}} <br>
+
+<h3>Pipes Fechas</h3>
+Sin formato: {{fecha}}  <br>
+Formato corto{{fecha | date:'short'}} <br>
+Formato Completo {{fecha | date:'full'}} <br> 
+*Fecha: {{ fecha | date:'shortDate'}} <br>
+Hora: {{fecha | date:'shortTime'}} <br>
+Otros Formatos{{fecha | date:'dd/MM/yyyy------HH:mm:ss'}} <br>
+
+<h3>Pipes de json</h3>
+Sin formato: {{jsonObjeto}} <br>
+*Con formato: {{jsonObjeto | json}} <br>
+Con formato,señalando elemento: {{jsonObjeto.nombre}}
+
+
+
+
