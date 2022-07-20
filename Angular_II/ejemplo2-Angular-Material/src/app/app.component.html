@@ -1,0 +1,99 @@
+
+<!--
+  Angular por defecto no posee estilos, pero se pueden agregar de forma muy sencilla,
+  la parte visual de la aplicación es muy importante porque es lo que mas le interesa al usuario
+  final. Angular Material es un framework de estilos para tus aplicaciones. 
+  Otra alternativa es bootstrap, framework para hacer interfaces que tiene estilos muy bonitos,
+   y una muy buena guía, nos permite implementar el diseño responsive de forma sencilla y cómoda
+INSTALAR EN EL PROYECTO: 
+$ ng add @angular/material
+-->
+
+
+<mat-tab-group>
+
+    <mat-tab label="Tipografia">
+      <p>Este es un parrafo de ejemplo</p>
+      <p class="mat-caption">Este es un parrafo de ejemplo. mat-caption</p>
+      <p class="mat-h1">Este es un parrafo de ejemplo. mat-h1</p>
+      <p class="mat-body">Este es un parrafo de ejemplo. mat-body</p>
+      <p class="mat-body-strong">Este es un parrafo de ejemplo. mat-body-strong</p>
+      <p class="mat-display-3">Este es un parrafo de ejemplo. mat-display-3</p>
+      <p class="mat-display-2">Este es un parrafo de ejemplo. mat-display-2</p>
+      <p class="mat-display-1">Este es un parrafo de ejemplo. mat-display-1</p>
+    </mat-tab>
+
+
+    <mat-tab label="Botones">
+      <div>
+        <button mat-button color="primary">Boton</button>
+        <button mat-button color="accent">Boton</button>
+        <button mat-button color="warn">Boton</button>
+      </div>
+
+      <div>
+        <button mat-raised-button color="primary">Boton</button>
+        <button mat-raised-button color="accent">Boton</button>
+        <button mat-raised-button color="warn">Boton</button>
+      </div>
+
+      <div>
+        <button mat-stroked-button color="primary">Boton</button>
+        <button mat-stroked-button color="accent">Boton</button>
+        <button mat-stroked-button color="warn">Boton</button>
+      </div>
+
+      <div>
+        <button mat-fab color="primary">Boton</button>
+        <button mat-fab color="accent">Boton</button>
+        <button mat-fab color="warn">Boton</button>
+      </div>
+
+      <div>
+        <button mat-mini-fab color="primary">Boton</button>
+        <button mat-mini-fab color="accent">Boton</button>
+        <button mat-mini-fab color="warn">Boton</button>
+      </div>
+
+      <div>
+        <button mat-icon-button color="primary">
+          <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button color="accent">
+          <mat-icon>home</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+          <mat-icon>lock</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+          <mat-icon>build</mat-icon>
+        </button>
+      </div>
+    </mat-tab>
+
+
+    <mat-tab label="Menu">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>morevert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="otro">Configuracion</button>
+        <button mat-menu-item>Ayuda</button>
+      </mat-menu>
+
+      <mat-menu #otro="matMenu">
+        <button mat-menu-item>Opcion 1</button>
+        <button mat-menu-item>Opcion 2</button>
+      </mat-menu>
+    </mat-tab>
+
+
+    <mat-tab label="Grid">
+      <mat-grid-list cols="3">
+          <mat-grid-tile *ngFor="let item of nombres" 
+            [style.background]="item.color">
+            {{item.nombre}}
+          </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+</mat-tab-group>
