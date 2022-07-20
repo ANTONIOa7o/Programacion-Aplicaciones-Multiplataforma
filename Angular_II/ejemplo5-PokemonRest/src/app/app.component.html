@@ -1,0 +1,29 @@
+<!--
+            ======================
+                LOS SERVICIOS
+                =============
+        
+    Serán la causa principal que nos permitirá centralizar funcionalidades, que puede
+    ser usados desde culquier componente, o exclusividad de alguno de ellos.
+    Permite el mantenimiento y la funcionalidad de nuestra aplicacion
+    Recordar los comandos de creacion de sistema injectable de servicios, desde
+    cmd $ npm gernera service services/nombre
+
+-->
+<h2>Busca Tu Pokemon preferido: </h2>
+Nombre:<input type="text" [(ngModel)]="nombre">
+<button class="" (click)="buscar()">Buscar</button>
+<div *ngIf=" pokemon !=null">
+    <ul>
+        <li>Nombre: {{pokemon.name}}</li>
+        <li>Peso:{{pokemon.weight}}</li>
+        <li>Altura: {{pokemon.height}}</li>
+        <li>Habilidades:
+            <ol>
+                <li *ngFor="let habilidad of pokemon.abilities">
+                    {{habilidad.ability.name}}
+                </li>
+            </ol>
+        </li>
+    </ul>
+</div>
