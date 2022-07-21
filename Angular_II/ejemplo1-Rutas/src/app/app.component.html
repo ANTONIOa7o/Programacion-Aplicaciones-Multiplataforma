@@ -1,0 +1,51 @@
+<!--
+================================
+LA  NAVEGACION EN LOS FRAMEWORK
+================================
+
+La  implementacion de  la navegacion en aplicacions SPA, la  forma mas eficaz hasta ahora
+es utilizando  los routerLink, nos  provee Angular,, donde accedemos a una reduccion 
+de los tiempos de conexion(carga), con la reedireccion, cambios de posicion. Quedando
+obseleto, las conexiones internas utilizando un href="", multiples razones entre ellas
+conceptos de  recarga, y dificultades con las asincronias.
+-->
+<div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+        <a class="nav-link active text-danger" routerLink="inicio">Inicio</a>
+    </div>
+    <!--
+         <a routerLink="" la  referencia de conexione entre el  componente, y el index, 
+           su referencia estará en app.module.ts
+           routerLinkActive:nos resalta el link que se encuentra activo
+        -->
+    <div class="bg-dark p-4">
+        <h2 class="text-danger" style="text-align: center; ">Angular II: La navegacion</h2>
+        <a class="nav-link active  " routerLinkActive="active" routerLink="c1">Componente 1</a>
+        <a class="nav-link active  text-danger" routerLinkActive="active" routerLink="c2">Componente 2</a>
+        <a class="nav-link active  " routerLinkActive="active" routerLink="c3/hotel_Riu"
+        [queryParams]="{entrada:'26/07/22',salida:'27/07/22',personas:2}"
+        >Componente 3</a>
+    </div>
+</div>
+<nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+        <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+<!--
+el router-outlet es  una etiqueta especial de angular no sirve para mostrar los componentes
+hijos, de un componente. Por defecto todos los compenentes son hijos del AppComponent. Sin duda
+se ha de incluir dicha etiqueta dentro de la vista dle appComponent(template). Indexandose cada
+uno de los componentes del  routing dpendiendo de la pagina en la que nos encontremos
+Sintaxis: estructura final de  una pagina
+
+<app-header></app-header>
+<app-nav></app-nav>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+-->
+<router-outlet></router-outlet>
