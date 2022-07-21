@@ -1,0 +1,15 @@
+h3{
+    font-size: xx-large;
+    color: royalblue;
+    font-weight: 600;
+}
+.centrar{
+    margin: 0 auto;
+    text-align: center;
+}
+img{
+    width: 5%;
+}
+a{
+    cursor: pointer;
+}
