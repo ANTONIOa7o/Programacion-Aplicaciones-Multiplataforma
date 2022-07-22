@@ -1,0 +1,15 @@
+<div class="row" style="margin-top: 30px ; text-align: center; ">
+    <div class="col md-1"></div>
+    <div class="col md-3">
+        <h2>{{nombre}}</h2>
+        <p>{{direccion}}</p>
+        <a routerLink="/museo_detalle/{{id}}">Volver al Museo</a>
+    </div>
+    <div class="col md-2"></div>
+    <div class="col md-5">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+            <agm-marker  [latitude]="lat" [longitude]="lng" ></agm-marker>
+        </agm-map>
+    </div>
+    <div class="col md-1"></div>
+</div>

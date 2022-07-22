@@ -1,0 +1,25 @@
+
+
+<div class="card" style="width: 40rem;margin: 0 auto;">
+    <img src="{{museo.imagen}}" alt="{{museo.nombre}}">
+    <div class="card-body">
+        <h5 class="card-title">{{museo.nombre}}</h5>
+        <h6 class="card-subtitle">{{museo.horario}}</h6>
+
+        <ul class="list-group">
+            <li class="list-group-item">telefono: {{museo.telefono}}</li>
+            <li class="list-group-item">Precio: {{museo.precio}}€</li>
+            <li class="list-group-item" *ngIf="museo.abierto">Abierto</li>
+            <li class="list-group-item" *ngIf="!museo.abierto">Cerrado</li>
+        </ul>
+        <a href="{{museo.web}}" type="button" target="_blank" class="">Web del  museo</a><br>
+        <a routerLink="/ubicacion_museo" 
+        [queryParams]="{latitud:museo.coordenadas[0],longitud:museo.coordenadas[1],
+       museo:museo.nombre, id:museo.id,direccion:museo.direccion}">Ubicacion museo</a><br>
+        <a routerLink="/museos" class="card-link">Volver a Museos</a>
+    </div>
+
+
+
+
+</div>
